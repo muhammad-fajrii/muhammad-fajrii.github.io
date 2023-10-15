@@ -99,7 +99,7 @@ var swiperPortfolio = new Swiper(".portfolio__container", {
 
     navigation: {
         nextEl: ".swiper-button-next",
-        prevEL: ".swiper-button-prev",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -113,9 +113,9 @@ const section = document.querySelectorAll("section[id]");
 function scrollActive() {
     const scrollY = window.pageYOffset;
 
-    sections.forEach((current) => {
+    section.forEach((current) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 50,
         sectionId = current.getAttribute("id");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -142,14 +142,14 @@ window.addEventListener("scroll", scrollHeader);
 
 // SHOW SCROLL UP
 function scrollUp() {
-    const nav = document.getElementById("scroll-up");
+    const scrollUp = document.getElementById("scroll-up");
     // when the scroll is higher than 560 viewport height, add the show-scroll class to the a tag woth the scroll-top class
     if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
     else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
 
-// DARK LIGHT THEME
+// DARK LIGHT THEME     
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
@@ -162,7 +162,7 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () => 
     document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-    document.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+    themeButton.classList.contains(iconTheme) ? "uil-sun" : "uil-moon";
 
 // we validate if the user previously chose a topic
 if (selectedTheme) {
@@ -170,7 +170,7 @@ if (selectedTheme) {
     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
         darkTheme
     );
-    themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+    themeButton.classList[selectedIcon === "uil-sun" ? "add" : "remove"](
         iconTheme
     );
 }
