@@ -5,19 +5,19 @@
     --header-height: 3rem;
     /* ======COLOR====== */
     /* change favorite color */
-    --hue-color: 300; /* Purple 250 - Green 142 - Blue 230 - Pink 340*/
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
-    --scrooll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scrooll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+--hue-color: 210; /* Ubah ke 210 untuk biru tua */
+--first-color: hsl(var(--hue-color), 69%, 61%);
+--first-color-second: hsl(var(--hue-color), 69%, 61%);
+--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+--title-color: hsl(var(--hue-color), 8%, 15%);
+--text-color: hsl(var(--hue-color), 8%, 45%);
+--text-color-light: hsl(var(--hue-color), 8%, 65%);
+--input-color: hsl(var(--hue-color), 70%, 96%);
+--body-color: hsl(var(--hue-color), 60%, 99%);
+--container-color: #fff;
+--scrooll-bar-color: hsl(var(--hue-color), 12%, 90%);
+--scrooll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     /* =========FONT AND TYPOGRAPHY========= */
     --body-font: "Poppins", sans-serif;
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
@@ -621,19 +621,23 @@ img {
     color: var(--first-color);
 }
 /* ================SERVICES================ */
+.services {
+    text-align: center;
+}
+
 .services__container {
-    gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah */
+    gap: 2rem; /* Spasi antar elemen */
 }
 
 .services__content {
-    position: relative;
-    background-color: var(--container-color);
-    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 1 2px 4px rgba(0, 0, 0, 0.15);
-    transition: 0.3s;
+    max-width: 300px; /* Membatasi lebar tiap layanan */
+    padding: 1.5rem;
+    background-color: #2c2c2c; /* Warna background yang kontras */
+    border-radius: 8px;
 }
+
 
 .services__content:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
