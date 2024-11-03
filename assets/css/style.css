@@ -734,9 +734,7 @@ img {
     margin: 0; /* Menghilangkan margin default */
 }
 
-.portfolio .portfolio-item {
-    margin-bottom: 30px;
- }
+
  
  .portfolio #portfolio-flters {
     padding: 0;
@@ -771,12 +769,11 @@ img {
  }
  
  .portfolio .portfolio-wrap {
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(69, 80, 91, 0.8);
- }
+    display: flex; /* Menggunakan flexbox pada wrapper gambar */
+    justify-content: center; /* Memusatkan gambar di dalam wrapper */
+    align-items: center; /* Memusatkan gambar secara vertikal */
+    height: 100%; /* Menggunakan tinggi penuh dari item portfolio */
+}
  
  .portfolio .portfolio-wrap::before {
     content: "";
