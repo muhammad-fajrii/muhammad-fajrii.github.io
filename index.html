@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <!-- ==================SWIPER CSS==================== -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- Link CSS GLightbox -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.0.9/css/glightbox.min.css">
+
     
     <!-- ===================CSS========================== -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -399,89 +403,117 @@
         </section>
         
         <!-- ================PORTFOLIO=============== -->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">My Favorite Movies</h2>
-            <span class="section__subtitle"></span>
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- ========PORTFOLIO 1========= -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/knn.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Your Name</h3>
-                            <p class="portfolio__description">
-                                Bercerita tentang dua remaja bernama Mitsuha Miyamizu dan Taki Tachibana yang bertukar tubuh. Awalnya mereka tidak saling mengenal dan keduanya tinggal di tempat yang berbeda jauh.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Next
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
+        <section id="gallery" class="portfolio section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Gallery</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center"
+                    data-aos="fade-up" data-aos-delay="100">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-app">Me</li>
+                            <li data-filter=".filter-card">XII</li>
+                            <li data-filter=".filter-web">Group</li>
+                        </ul>
                     </div>
-                    <!-- ==========PORTFOLIO 2=========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/jjk0.png" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Jujutsu Kaisen 0</h3>
-                            <p class="portfolio__description">
-                                Yuta Okkotsu adalah seorang siswa SMA penyendiri yang mengalami masalah besar—teman masa kecilnya, Rika telah menjelma menjadi roh kutukan yang enggan lepas darinya.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Next
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ==========PORTFOLIO 3=========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/gotoubun.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">The Quintessential Quintuplets</h3>
-                            <p class="portfolio__description">
-                                Futaro telah memimpin lima kembar ke titik di mana mereka dapat mengejar impian mereka sendiri. Untuk menjadikan kesempatan ini tak terlupakan, Futaro mencari perasaannya terhadap kelima kembar.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Next
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ==========PORTFOLIO 4=========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/kaguyasama.jpeg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Kaguya-sama Movie</h3>
-                            <p class="portfolio__description">
-                                Menceritakan Shinomiya Kaguya dan Shirogane Miyuki yang gelisah satu sama lain. Usai terlibat ciuman, Shirogane Miyuki dan Shinomiya Kaguya malah ragu tentang hubungan mereka. Mereka bingung apakah mereka pacaran atau tidak.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Next
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ==========PORTFOLIO 5=========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/rascalbunny.png" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Rascal Does not Dream of a Sister Venturing Out</h3>
-                            <p class="portfolio__description">
-                                Kaede Azusagawa mengalami gangguan disosiatif yang mengakibatkan amnesia total. Dua tahun berikutnya, dia hidup sebagai orang yang berbeda, bersembunyi dari dunia. Untungnya, berkat kakak laki-lakinya dia bisa pulih kembali.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Next
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+                </div>
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/f1.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                            <h4>Group</h4>
+                            <p>Sejarah Grup</p>
+                            <div class="portfolio-links">
+                                <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/gtg2.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Saya</h4>
+                                <p>Ganteng</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/srstg.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Group</h4>
+                                <p>Sejarah Grup</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/r7.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Specials</h4>
+                                <p>R7 kw</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/tgf1.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Group</h4>
+                                <p>Sejarah Grup</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/f2.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Group</h4>
+                                <p>ganteng</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/f3.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Group</h4>
+                                <p>Ganteng</p>
+                                <div class="portfolio-links">
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
             </div>
         </section>
         <!-- ===============PROJECT IN MIND============ -->
@@ -592,5 +624,12 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- ============MAIN JS=============== -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Import Isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- Import GLightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.0.9/glightbox.min.js"></script>
+    
+
 </body>
 </html>

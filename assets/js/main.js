@@ -93,19 +93,65 @@ modalCloses.forEach((modalClose, index) => {
 });
 
 // PORTFOLIO SWIPER
-var swiperPortfolio = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
+window.addEventListener('load', () => {
+    const select = (el, all = false) => {
+        el = el.trim();
+        if (all) {
+            return [...document.querySelectorAll(el)];
+        } else {
+            return document.querySelector(el);
+        }
+    };
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+        let portfolioIsotope = new Isotope(portfolioContainer, {
+            itemSelector: '.portfolio-item'
+        });
+        let portfolioFilters = select('#portfolio-flters li', true);
+
+        portfolioFilters.forEach((el) => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                portfolioFilters.forEach(function(filter) {
+                    filter.classList.remove('filter-active');
+                });
+                this.classList.add('filter-active');
+                portfolioIsotope.arrange({
+                    filter: this.getAttribute('data-filter')
+                });
+                portfolioIsotope.on('arrangeComplete', function() {
+                    AOS.refresh();
+                });
+            });
+        });
+    }
+
+    const portfolioLightbox = GLightbox({
+        selector: '.portfolio-lightbox'
+    });
+
+    const portfolioDetailsLightbox = GLightbox({
+        selector: '.portfolio-details-lightbox',
+        width: '90%',
+        height: '90vh'
+    });
+
+    new Swiper('.portfolio-details-slider', {
+        speed: 400,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        }
+    });
 });
+
 
 // SCROLL SECTIONS ACTIVE LINK
 const section = document.querySelectorAll("section[id]");
