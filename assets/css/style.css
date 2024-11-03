@@ -722,6 +722,19 @@ img {
 
 /* ===================PORTFOLIO=============== */
 .portfolio .portfolio-item {
+    display: flex; /* Menggunakan flexbox untuk penataan */
+    justify-content: center; /* Memusatkan konten horizontal */
+    align-items: center; /* Memusatkan konten vertical (jika diperlukan) */
+}
+
+.portfolio .portfolio-item img {
+    width: 100%; /* Atur lebar gambar menjadi 100% dari kontainer */
+    height: auto; /* Tinggi akan disesuaikan secara otomatis untuk menjaga proporsi */
+    max-width: 200px; /* Atur lebar maksimum gambar menjadi 200px */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+.portfolio .portfolio-item {
     margin-bottom: 30px;
  }
  
